@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Materiais de Construção</title>
+  <link rel="stylesheet" href="products.css">
+  <script src="products.js" defer></script>
+</head>
+<body>
+
+<h1>Catálogo de Materiais de Construção</h1>
+<div class="filters">
+  <button class="filter-button" onclick="filterProducts('all')">Todos</button>
+  <button class="filter-button" onclick="filterProducts('cimento')">Cimento</button>
+  <button class="filter-button" onclick="filterProducts('tijolo')">Tijolo</button>
+  <!-- Adicione mais botões de filtro conforme necessário -->
+</div>
+
+<div class="container">
+  <div class="product" data-category="tijolo">
+    <img src="tijolo.jpeg" alt="Tijolo">
+    <h2>Tijolo</h2>
+    <p>Tijolo maciço comum para construção e acabamento.</p>
+    <p>Preço: R$1,50</p>
+  </div>
+
+  <div class="product" data-category="cimento">
+    <img src="cimento.jpeg" alt="cimento">
+    <h2>Cimento</h2>
+    <p>Cimento comum para construção e acabamento.</p>
+    <p>Preço: R$30,50</p>
+  </div>
+  
+  <!-- Adicione mais produtos aqui -->
+</div>
+
+</body>
+</html>
