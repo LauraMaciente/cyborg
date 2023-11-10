@@ -14,10 +14,7 @@
 <h1>Catálogo de Materiais de Construção</h1>
 <div class="filters">
   <button class="filter-button" onclick="filterProducts('all')">Todos</button>
-  <button class="filter-button" onclick="filterProducts('cimento')">Cimento</button>
-  <button class="filter-button" onclick="filterProducts('tijolo')">Tijolo</button>
-  <!-- Adicione mais botões de filtro conforme necessário -->
-</div>
+  <button class="filter-button" onclick="filterProducts('PROMOÇÃO')">Cimento</button>
 
 <div class="container">
 <!--
@@ -36,14 +33,21 @@
   </div>
 -->
 
-  {% for product in page_obj  %}
-    <div class="product" data-category="cimento">
+  {% for product in products_paginator  %}
+    <div class="product
+    
+    " data-category="PROMOÇÃO">
     <img src="
     {% if product.image %}
     {{ product.image.url }}
     {% endif %} 
-    " alt="cimento">
-    <h2>{{ product.name }}</h2>
+    "alt="">
+    <h2 class="
+    {% if product.off %}
+    offer
+    {% endif %}
+    ">{{ product.name }}</h2>
+    
     <p>{{ product.description }}</p>
     <p>Preço: R${{ product.price }}</p>
   </div>
@@ -55,18 +59,18 @@
 
 <div class="pagination">
     <span class="step-links">
-        {% if page_obj.has_previous %}
+        {% if products_paginator.has_previous %}
             <a href="?page=1">&laquo; primeira</a>
-            <a href="?page={{ page_obj.previous_page_number }}">anterior</a>
+            <a href="?page={{ products_paginator.previous_page_number }}">anterior</a>
         {% endif %}
 
         <span class="current">
-            Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+            Página {{ products_paginator.number }} de {{ products_paginator.paginator.num_pages }}.
         </span>
 
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">próxima</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}">última &raquo;</a>
+        {% if products_paginator.has_next %}
+            <a href="?page={{ products_paginator.next_page_number }}">próxima</a>
+            <a href="?page={{ products_paginator.paginator.num_pages }}">última &raquo;</a>
         {% endif %}
     </span>
 </div>
