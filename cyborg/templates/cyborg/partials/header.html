@@ -1,8 +1,8 @@
-
+{% load static %}
 <header>
     <nav class="nav-bar">
         <div class="logo">
-            <img src="logo.jpg">
+            <img src="{% static 'cyborg/images/logo.jpg' %}">
         </div>
 
         <div class="nav-list">
@@ -18,7 +18,7 @@
         </div>
 
         <div class="mobile-menu-icon">
-            <button onclick="menuShow()"> <img class="icon" src="menu.png" alt=""></button>
+            <button onclick="menuShow()"> <img class="icon" src="{% static 'cyborg/images/menu.png' %}"></button>
         </div>
     </nav>
 

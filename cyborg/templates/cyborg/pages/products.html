@@ -20,6 +20,7 @@
 </div>
 
 <div class="container">
+<!--
   <div class="product" data-category="tijolo">
     <img src="tijolo.jpeg" alt="Tijolo">
     <h2>Tijolo</h2>
@@ -33,7 +34,40 @@
     <p>Cimento comum para construção e acabamento.</p>
     <p>Preço: R$30,50</p>
   </div>
-  
-  <!-- Adicione mais produtos aqui -->
+-->
+
+  {% for product in page_obj  %}
+    <div class="product" data-category="cimento">
+    <img src="
+    {% if product.image %}
+    {{ product.image.url }}
+    {% endif %} 
+    " alt="cimento">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p>Preço: R${{ product.price }}</p>
+  </div>
+  {% endfor %}
+
+
+
+</div>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; primeira</a>
+            <a href="?page={{ page_obj.previous_page_number }}">anterior</a>
+        {% endif %}
+
+        <span class="current">
+            Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">próxima</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">última &raquo;</a>
+        {% endif %}
+    </span>
 </div>
 {% endblock content %}
