@@ -25,11 +25,20 @@ header {
     align-items: center;
 }
 
-.logo img {
+.logo h1 {
     width: 100px;
     height: auto; 
 }
 
+.logo h1 {
+    color: red;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: white;
+    padding: 10px 20px;
+
+}
 
 .nav-list {
     display: flex;
