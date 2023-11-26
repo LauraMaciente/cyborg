@@ -1,55 +1,55 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 10px;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0055AA;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px;
+}
+.product {
+  border: 1px solid #000000; 
+  border-radius: 5px; 
+  margin: 10px; 
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);              
+  background: #fff; 
+  width: calc(100% / 3 - 20px - 20px); 
+  box-sizing: border-box; 
+}
+.product img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: auto; /* Novo */
+}
+.filters {
+  text-align: center;
+  padding: 20px;
+}
+.filter-button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  transition: background-color 0.3s ease;
+}
+.filter-button:hover {
+  background-color: #0055AA;
+}
+@media (max-width: 800px) {
   .product {
-    border: 1px solid #000000; /* Espessura e cor da borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    margin: 10px; /* Espaçamento entre os produtos */
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra opcional para um pouco de profundidade */
-    background: #fff; /* Fundo branco para os produtos */
-    width: calc(100% / 3 - 20px - 20px); /* Ajuste de largura considerando a margem */
-    box-sizing: border-box; /* Inclui padding e borda na largura total do elemento */
+    width: calc(100% / 2 - 20px - 20px);
   }
-  .product img {
-    width: 100px;
-    text-align: center;
-    height: auto;
-    display: block; /* Remove espaço extra abaixo das imagens */
+}
+@media (max-width: 500px) {
+  .product {
+    width: calc(100% - 20px - 20px);
   }
-  .filters {
-    text-align: center;
-    padding: 20px;
-  }
-  .filter-button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #f2f2f2;
-    transition: background-color 0.3s ease;
-  }
-  .filter-button:hover {
-    background-color: #e2e2e2;
-  }
-  @media (max-width: 800px) {
-    .product {
-      width: calc(100% / 2 - 20px - 20px);
-    }
-  }
-  @media (max-width: 500px) {
-    .product {
-      width: calc(100% - 20px - 20px);
-    }
-  }
-  
+}

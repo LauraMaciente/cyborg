@@ -1,0 +1,57 @@
+.contact-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.contact-container h2 {
+    color: #0055AA;
+    margin-bottom: 20px;
+}
+
+.contact-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Adicionado para permitir a quebra de linha dos itens */
+}
+
+.contact-option {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 300px;
+    margin-bottom: 20px; /* Espaçamento para quando os itens quebrarem a linha */
+}
+
+.contact-option h3 {
+    color: #4a4a4a;
+    margin: 10px 0;
+}
+
+.contact-option .icon {
+    font-size: 24px;
+}
+
+a {
+    color: #0055AA;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media query para telas menores (ex: smartphones) */
+@media (max-width: 600px) {
+    .contact-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-option {
+        width: 80%; /* Ajuste a largura para se adequar a telas menores */
+        margin-bottom: 20px;
+    }
+}

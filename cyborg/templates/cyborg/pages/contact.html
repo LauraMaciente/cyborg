@@ -1,0 +1,47 @@
+{% extends "cyborg/base.html" %}
+{% load static %}
+
+{% block extra_head %}
+
+    <link rel="stylesheet" href="{% static 'cyborg/css/contact.css' %}">
+
+{% endblock extra_head %}
+
+{% block content %}
+<style> 
+    body{
+      background-image: none;
+      background-color: white;
+    }
+    </style>
+
+<div class="contact-container">
+    <h2>Como você prefere falar com a gente?</h2>
+    <div class="contact-options">
+        <div class="contact-option">
+            <span class="icon">📧</span>
+            <h3>E-mail</h3>
+            <p>Tem alguma dúvida?</p>
+            <a href="Email:cyborghomecenter@gmail.com">cyborghomecenter@gmail.com</a>
+        </div>
+        <div class="contact-option">
+            <span class="icon">📞</span>
+            <h3>Telefone</h3>
+            <p>Lidia</p>
+            <a href="tel:+92984431427">92 98443-1427</a>
+            <p>Joao</p>
+            <a href="tel:+92984133362">92 98413-3362</a>
+            <p>Vinicius</p>
+            <a href="tel:+92985991641">92 98599-1641</a>
+            <p>Dennys Oliveira</p>
+            <a href="tel:+92985843463">92 98584-3463</a>
+        </div>
+        <div class="contact-option">
+            <span class="icon">🔗</span>
+            <h3>Instagram</h3>
+            <a href="https://instagram.com/cyborghomecenter?igshid=MmVlMjlkMTBhMg==">cyborghomecenter</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

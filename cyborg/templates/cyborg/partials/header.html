@@ -2,19 +2,19 @@
 <header>
     <nav class="nav-bar">
         <div class="logo">
-            <h1> CYBORG HOME CENTER </H1>
+            <h1> CYBORG </H1>
         </div>
 
         <div class="nav-list">
             <ul>
                 <li class="nav-item"><a href="{% url 'cyborg:index' %}" class="nav-link">HOME</a></li>
                 <li class="nav-item"><a href="{% url 'cyborg:produtos' %}" class="nav-link">PRODUTOS</a></li>
-                <li class="nav-item"><a href="{% url 'cyborg:index' %}" class="nav-link">CONTATO</a></li>
+                <li class="nav-item"><a href="{% url 'cyborg:sobre' %}" class="nav-link">CONTATO</a></li>
             </ul>
         </div>
 
         <div class="login-button">
-            <button> <a href="#">ENTRAR</a></button>
+            <button> <a href="{% url 'cyborg:login' %}">ENTRAR</a></button>
         </div>
 
         <div class="mobile-menu-icon">
@@ -25,12 +25,12 @@
     <div class="mobile-menu">
         <ul>
             <li class="nav-item"><a href="{% url 'cyborg:index' %}" class="nav-link">HOME</a></li>
-            <li class="nav-item"><a href="products.html" class="nav-link">PRODUTOS</a></li>
-            <li class="nav-item"><a href="sobre.html" class="nav-link">CONTATO</a></button></li>
+            <li class="nav-item"><a href="{% url 'cyborg:produtos' %}" class="nav-link">PRODUTOS</a></li>
+            <li class="nav-item"><a href="{% url 'cyborg:sobre' %}" class="nav-link">CONTATO</a></li>
         </ul>
 
         <div class="login-button">
-            <button> <a href="#">ENTRAR</a></button>
+            <button> <a href="{% url 'cyborg:login' %}">ENTRAR</a></button>
         </div>
     </div>
 </header>

@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/cyborg/images/cyborg.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #0055AA;
+    box-shadow: 0px 3px 10px #435b72;
+    padding: 10px 0;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo h1 {
+    color: red;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: white;
+    padding: 10px 20px;
+
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-self: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: white;
+    font-weight: 400;
+}
+
+.login-button button {
+    border: none;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+    }
+}
+
+.offer{
+    color: red;
+}

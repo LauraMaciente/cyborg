@@ -1,4 +1,4 @@
-{% extends "cyborg/base.html" %}
+{% extends 'cyborg/base.html' %}
 {% load static %}
 
 
@@ -11,9 +11,17 @@
 
 
 {% block content %}
+
+<style> 
+body{
+  background-image: none;
+  background-color: white;
+}
+</style>
+
 <div class="filters">
   <button class="filter-button" onclick="filterProducts('all')">Todos</button>
-  <button class="filter-button" onclick="filterProducts('PROMOÇÃO')">Promoção</button>
+  <button class="filter-button" onclick="filterProducts('off')">Promoção</button>
 
 <div class="container">
 <!--
@@ -35,7 +43,7 @@
   {% for product in products_paginator  %}
     <div class="product
     
-    " data-category="PROMOÇÃO">
+    " data-category="off">
     <img src="
     {% if product.image %}
     {{ product.image.url }}

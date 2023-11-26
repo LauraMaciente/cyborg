@@ -1,0 +1,25 @@
+{% extends 'cyborg/base.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'cyborg/css/login.css' %}">
+{% endblock extra_head %}
+
+{% block content %}
+<style> 
+    body{
+      background-image: none;
+      background-color: white;
+    }
+    </style>
+    <div class="login-container">
+    <h1> CYBORG </h1>
+        <form method="post" action="">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Nome de usuário">
+            <input type="password" name="password" placeholder="Senha">
+            <button type="submit">ENTRAR</button> 
+            <button> <a href="{% url 'cyborg:index' %}">VOLTAR</a></button>
+        </form>
+    </div>
+{% endblock content %}
